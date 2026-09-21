@@ -1,0 +1,27 @@
+{
+    "name": "agape-foundation/backend",
+    "type": "project",
+    "description": "Agape Family Foundation — Laravel + MySQL backend (replaces the old plain-Node server.js)",
+    "require": {
+        "php": "^8.2",
+        "laravel/framework": "^11.0",
+        "laravel/sanctum": "^4.0",
+        "pragmarx/google2fa": "^8.0",
+        "bacon/bacon-qr-code": "^2.0",
+        "intervention/image": "^3.5"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.13",
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {
+        "psr-4": { "App\\": "app/" }
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ]
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
